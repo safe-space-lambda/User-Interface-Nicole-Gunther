@@ -39,17 +39,17 @@ header{
         }
 
         a{
-            transition: 0.5s;
-            text-decoration: none;
-            padding: 15px 25px;
-            border: 1.5px solid @white;
-            border-radius: 10px;
-            margin-bottom: 40px;
-
             &:hover{
                 background: @charcoal;
                 opacity: 0.8;
             }
         }
+        .btn{
+            text-decoration: none;
+            .custom-btn(150px, 55px);
+            border: 1.5px solid @white;
+            margin-bottom: 40px;
+        }
+    
     }
 }

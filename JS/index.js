@@ -1,8 +1,9 @@
-let btn = document.querySelector('#btn');
+let btn = document.querySelector('.intro a');
 let hello = document.querySelector('.hello');
 let welcome = document.querySelector('.welcome');
 let introText = document.querySelector('.intro-text');
 let mainText = document.querySelectorAll('.main-text');
+let login = document.querySelector('#login-btn');
 
 window.addEventListener('load', () => {
     setTimeout( () => {
@@ -29,11 +30,22 @@ window.addEventListener('load', () => {
     setTimeout( () => {
         btn.classList.remove('hidden');
         btn.classList.add('fade-in-fwd');
+        btn.classList.add('btn');
     }, 5000);
 });
 
-btn.addEventListener('click', () => {
-    mainText.forEach(element => {
-        element.classList.remove('hidden');
-    });
+btn.addEventListener('mousedown', event => {
+    event.target.style.fontSize = "2.1rem";
+});
+
+btn.addEventListener('mouseup', event => {
+    event.target.style.fontSize = "2.4rem";
+});
+
+login.addEventListener('mousedown', event => {
+    event.target.style.fontSize = "2.1rem";
+});
+
+login.addEventListener('mouseup', event => {
+    event.target.style.fontSize = "2.4rem";
 });
