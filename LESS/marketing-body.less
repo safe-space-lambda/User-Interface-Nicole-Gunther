@@ -1,0 +1,29 @@
+#main-content{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+
+    #woman-with-phone{
+        width: 100%;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    p{
+        margin: 20px 0;
+
+        &:last-child{
+            padding-bottom: 20px;
+        }
+    }
+
+    #login-btn{
+        .custom-btn(120px, 45px);
+        text-decoration: none;
+        background-color: @dark-green;
+        margin-bottom: 40px;
+
+        &:hover{
+            background-color: @light-green;
+        }
+    }
+}
