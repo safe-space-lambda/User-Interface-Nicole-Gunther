@@ -51,18 +51,17 @@ signUp.addEventListener('mouseup', event => {
     event.target.style.fontSize = "2.4rem";
 });
 
+var tabletWidth = window.matchMedia("(min-width: 500px)");
 var desktopWidth = window.matchMedia("(min-width: 700px)");
 
-if (desktopWidth.matches) {
+if (tabletWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
-            headerImg.style.display = "flex";
-            headerImg.classList.add('fade-in-fwd');
             welcome.style.display = "flex";
             welcome.classList.add('fade-in-fwd');
         }, 500);
     });
-
+    
     window.addEventListener('load', () => {
         setTimeout( () => {
             introText.classList.remove('hidden');
@@ -78,3 +77,64 @@ if (desktopWidth.matches) {
         }, 3500);
     });
 }
+
+if (desktopWidth.matches) {
+    window.addEventListener('load', () => {
+        setTimeout( () => {
+            headerImg.style.display = "flex";
+            headerImg.classList.add('fade-in-fwd');
+        }, 500);
+    });
+}
+
+class TabLink {
+    constructor(tabElement){
+
+        this.tabElement=tabElement;
+
+        this.tabData = tabElement.dataset.tab;
+        
+        if(this.tabData ==='all'){
+            this.cards = document.querySelectorAll(`.card`); ;
+        } else {
+            this.cards = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
+        }
+
+        this.cards = Array.from(this.cards).map(card => new TabCard(card));
+
+        this.tabElement.addEventListener('click', () => {
+            return this.selectTab();
+        });
+    }
+
+    selectTab(){
+        const tabs = document.querySelectorAll('.tab');
+
+        tabs.forEach(({classList}) => {
+            classList.remove('active-tab');
+        });
+
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(function(element) {
+            element.style.display = "none";
+        });
+
+        this.tabElement.classList.add('active-tab');
+
+
+        this.cards.forEach(card => card.selectCard());
+    }
+}
+
+class TabCard {
+    constructor(cardElement){
+        this.cardElement = cardElement;
+    }
+    selectCard(){
+        this.cardElement.style.display = "flex";
+    }
+}
+
+let tabs = document.querySelectorAll('.tab');
+tabs.forEach(link => new TabLink(link));
