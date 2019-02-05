@@ -269,7 +269,7 @@ footer h6 {
 #main-content p:last-child {
   padding-bottom: 20px;
 }
-#main-content #login-btn {
+#main-content #signup-btn {
   width: 120px;
   height: 45px;
   cursor: pointer;
@@ -281,6 +281,6 @@ footer h6 {
   background-color: #4fa49a;
   margin-bottom: 40px;
 }
-#main-content #login-btn:hover {
+#main-content #signup-btn:hover {
   background-color: #8addaa;
 }
