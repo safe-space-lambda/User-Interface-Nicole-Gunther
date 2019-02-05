@@ -356,6 +356,21 @@ footer h6 {
   flex-flow: column nowrap;
   align-items: center;
 }
+#main-content .card .card-content .body-img,
+#main-content .active-card .card-content .body-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  max-width: 470px;
+  border-radius: 30px;
+}
+@media (min-width: 701px) {
+  #main-content .card .card-content .body-img,
+  #main-content .active-card .card-content .body-img {
+    width: 47%;
+  }
+}
 @media (min-width: 701px) {
   #main-content .card .card-content,
   #main-content .active-card .card-content {
@@ -365,16 +380,6 @@ footer h6 {
   #main-content .active-card .card-content p,
   #main-content .card .card-content .body-img,
   #main-content .active-card .card-content .body-img {
-    width: 47%;
-  }
-}
-#main-content .body-img {
-  width: 100%;
-  max-width: 470px;
-  border-radius: 30px;
-}
-@media (min-width: 701px) {
-  #main-content .body-img {
     width: 47%;
   }
 }

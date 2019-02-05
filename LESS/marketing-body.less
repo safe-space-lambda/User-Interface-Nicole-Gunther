@@ -51,6 +51,19 @@
             flex-flow: column nowrap;
             align-items: center;
 
+            .body-img{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                max-width: 470px;
+                border-radius: 30px;
+        
+                @media @desktop{
+                    width: 47%;
+                }
+            }
+
             @media @desktop{
                 flex-flow: row wrap;
 
@@ -58,16 +71,6 @@
                     width: 47%;
                 }
             }
-        }
-    }
-
-    .body-img{
-        width: 100%;
-        max-width: 470px;
-        border-radius: 30px;
-
-        @media @desktop{
-            width: 47%;
         }
     }
 
