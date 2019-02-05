@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
 });
 
 btn.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.1rem";
+    event.target.style.fontSize = "2.2rem";
 });
 
 btn.addEventListener('mouseup', event => {
@@ -44,7 +44,7 @@ btn.addEventListener('mouseup', event => {
 });
 
 signUp.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.1rem";
+    event.target.style.fontSize = "2.2rem";
 });
 
 signUp.addEventListener('mouseup', event => {

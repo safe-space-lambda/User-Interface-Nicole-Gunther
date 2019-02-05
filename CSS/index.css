@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -152,11 +153,11 @@ h3 {
 }
 h4 {
   font-size: 4rem;
-  color: #FFFFFF;
+  color: #666;
 }
 h5 {
-  font-size: 4rem;
-  color: #FFFFFF;
+  font-size: 2.5rem;
+  color: #666;
 }
 h6 {
   font-size: 1.5rem;
@@ -255,6 +256,7 @@ header .intro .btn {
   width: 150px;
   height: 55px;
   cursor: pointer;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,6 +290,18 @@ footer {
 footer h6 {
   text-align: center;
 }
+.topics {
+  background: #8addaa;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 90%;
+}
+.topics .tab {
+  text-align: center;
+  padding: 10px 0;
+}
 #main-content {
   width: 95%;
   max-width: 1000px;
@@ -295,8 +309,15 @@ footer h6 {
 }
 #main-content #woman-with-phone {
   width: 100%;
+  max-width: 470px;
+  margin: auto;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 30px;
+}
+@media (min-width: 700px) {
+  #main-content #woman-with-phone {
+    width: 50%;
+  }
 }
 #main-content p {
   margin: 20px 0;
@@ -308,6 +329,7 @@ footer h6 {
   width: 120px;
   height: 45px;
   cursor: pointer;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;

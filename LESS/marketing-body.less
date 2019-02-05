@@ -1,3 +1,17 @@
+.topics{
+    background: @light-green;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+
+    .tab{
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
 #main-content{
     width: 95%;
     max-width: 1000px;
@@ -5,9 +19,16 @@
 
     #woman-with-phone{
         width: 100%;
+        max-width: 470px;
+        margin: auto;
         padding: 15px;
-        border-radius: 20px;
+        border-radius: 30px;
+
+        @media @desktop{
+            width: 50%;
+        }
     }
+
     p{
         margin: 20px 0;
 
