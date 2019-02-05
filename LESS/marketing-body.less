@@ -1,29 +1,34 @@
-
-
 .tabs {
+    padding-top: 30px;
+
     .topics{
         margin: 20px auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid @charcoal;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         width: 90%;
+        max-width: 900px;
     
         .tab{
             text-align: center;
             padding: 10px;
             margin-bottom: 10px;
+            transition: 0.5s;
     
             &:hover{
                 background-color: @light-grey;
                 cursor: pointer;
             }
+
+            @media @tablet{
+                padding: 10px 20px;
+            }
         }
 
         .active-tab {
             background-color: @light-grey;
-            h4{
-                color: @black;
-            }
         }
     }
 }
@@ -33,15 +38,19 @@
     max-width: 1000px;
     margin: auto;
 
-    #woman-with-phone{
+    .card{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .body-img{
         width: 100%;
         max-width: 470px;
-        margin: auto;
-        padding: 15px;
         border-radius: 30px;
 
         @media @desktop{
-            width: 50%;
+            width: 47%;
         }
     }
 
@@ -61,6 +70,23 @@
 
         &:hover{
             background-color: @light-green;
+        }
+    }
+
+    .active-card{
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .card-content{
+            flex-flow: column nowrap;
+            align-items: center;
+            @media @desktop{
+                flex-flow: row wrap;
+
+                p, .body-img{
+                    width: 47%;
+                }
+            }
         }
     }
 }

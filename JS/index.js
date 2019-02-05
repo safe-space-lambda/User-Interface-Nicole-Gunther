@@ -51,8 +51,8 @@ signUp.addEventListener('mouseup', event => {
     event.target.style.fontSize = "2.4rem";
 });
 
-var tabletWidth = window.matchMedia("(min-width: 500px)");
-var desktopWidth = window.matchMedia("(min-width: 700px)");
+var tabletWidth = window.matchMedia("(min-width: 501px)");
+var desktopWidth = window.matchMedia("(min-width: 701px)");
 
 if (tabletWidth.matches) {
     window.addEventListener('load', () => {
@@ -95,7 +95,7 @@ class TabLink {
         this.tabData = tabElement.dataset.tab;
         
         if(this.tabData ==='all'){
-            this.cards = document.querySelectorAll(`.card`); ;
+            this.cards = document.querySelectorAll(`.card`);
         } else {
             this.cards = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
         }
@@ -133,6 +133,7 @@ class TabCard {
     }
     selectCard(){
         this.cardElement.style.display = "flex";
+        this.cardElement.classList.add('active-card');
     }
 }
 

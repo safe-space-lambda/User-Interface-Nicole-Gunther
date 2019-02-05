@@ -243,7 +243,7 @@ header .header-row1 #header-img {
   height: 40%;
   border-radius: 50%;
 }
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   header .header-row1 {
     display: flex;
     justify-content: space-between;
@@ -279,17 +279,17 @@ header .intro .btn {
   border: 1.5px solid #ffffff;
   margin-bottom: 40px;
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   header .intro {
     width: 460px;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   header .intro {
     height: 250px;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 501px) {
   header {
     align-items: center;
   }
@@ -305,43 +305,55 @@ footer {
 footer h6 {
   text-align: center;
 }
+.tabs {
+  padding-top: 30px;
+}
 .tabs .topics {
   margin: 20px auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 90%;
+  max-width: 900px;
 }
 .tabs .topics .tab {
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
+  transition: 0.5s;
 }
 .tabs .topics .tab:hover {
   background-color: #e6e6e6;
   cursor: pointer;
 }
+@media (min-width: 501px) {
+  .tabs .topics .tab {
+    padding: 10px 20px;
+  }
+}
 .tabs .topics .active-tab {
   background-color: #e6e6e6;
-}
-.tabs .topics .active-tab h4 {
-  color: #000000;
 }
 #main-content {
   width: 95%;
   max-width: 1000px;
   margin: auto;
 }
-#main-content #woman-with-phone {
+#main-content .card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#main-content .body-img {
   width: 100%;
   max-width: 470px;
-  margin: auto;
-  padding: 15px;
   border-radius: 30px;
 }
-@media (min-width: 700px) {
-  #main-content #woman-with-phone {
-    width: 50%;
+@media (min-width: 701px) {
+  #main-content .body-img {
+    width: 47%;
   }
 }
 #main-content p {
@@ -365,4 +377,21 @@ footer h6 {
 }
 #main-content #signup-btn:hover {
   background-color: #8addaa;
+}
+#main-content .active-card {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#main-content .active-card .card-content {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+@media (min-width: 701px) {
+  #main-content .active-card .card-content {
+    flex-flow: row wrap;
+  }
+  #main-content .active-card .card-content p,
+  #main-content .active-card .card-content .body-img {
+    width: 47%;
+  }
 }
