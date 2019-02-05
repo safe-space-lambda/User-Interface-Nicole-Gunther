@@ -34,14 +34,31 @@
 }
 
 #main-content{
-    width: 95%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 900px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .card{
+    .card, .active-card{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+
+        .card-content{
+            margin-top: 20px;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            @media @desktop{
+                flex-flow: row wrap;
+
+                p, .body-img{
+                    width: 47%;
+                }
+            }
+        }
     }
 
     .body-img{
@@ -62,30 +79,25 @@
         }
     }
 
-    #signup-btn{
-        .custom-btn(120px, 45px);
-        text-decoration: none;
-        background-color: @dark-green;
-        margin: 30px auto;
-
-        &:hover{
-            background-color: @light-green;
-        }
-    }
-
-    .active-card{
-        flex-flow: column nowrap;
+    .sign-up{
+        border-top: 1px solid @charcoal;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
 
-        .card-content{
-            flex-flow: column nowrap;
-            align-items: center;
-            @media @desktop{
-                flex-flow: row wrap;
+        P{
+            padding-top: 10px;
+        }
 
-                p, .body-img{
-                    width: 47%;
-                }
+        #signup-btn{
+            .custom-btn(120px, 45px);
+            text-decoration: none;
+            background-color: @dark-green;
+            margin: 10px auto;
+    
+            &:hover{
+                background-color: @light-green;
             }
         }
     }
