@@ -1,7 +1,7 @@
 let btn = document.querySelector('.intro a');
 let hello = document.querySelector('.hello');
 let welcome = document.querySelector('.welcome');
-let headerImg = document.querySelector('#header-img');
+let headerImg = document.querySelector('.header-img');
 let introText = document.querySelector('.intro-text');
 let mainText = document.querySelectorAll('.main-text');
 let signUp = document.querySelector('#signup-btn');
@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
     setTimeout( () => {
         hello.classList.remove('hidden');
         hello.classList.add('fade-in-fwd');
+        headerImg.removeAttribute("id");
     }, 500);
 });
 

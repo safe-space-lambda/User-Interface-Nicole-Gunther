@@ -248,14 +248,17 @@ header .header-row1 .hello-welcome .welcome {
   display: none;
   justify-content: flex-start;
 }
-header .header-row1 #header-img {
+header .header-row1 #hidden-img {
+  display: none;
+}
+header .header-row1 .header-img {
   display: none;
   width: 40%;
   height: 40%;
   border-radius: 50%;
 }
 @media (min-width: 701px) {
-  header .header-row1 #header-img {
+  header .header-row1 .header-img {
     display: flex;
   }
 }
