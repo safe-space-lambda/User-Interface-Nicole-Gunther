@@ -41,14 +41,14 @@
     flex-direction: column;
     align-items: center;
 
-    .card, .active-card{
+    .active-card{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         width: 100%;
 
         .card-content{
-            margin-top: 20px;
+            margin: 20px 0;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -59,30 +59,30 @@
                 display: flex;
                 justify-content: center;
                 width: 85%;
-                margin: auto;
                 max-width: 470px;
                 border-radius: 30px;
-
-                @media @desktop{
-                    margin-top: 10px;
-                }
             }
 
             p{
-                margin: 20px auto;
+                margin: auto;
                 max-width: 570px;
                 text-align: justify;
                 width: 98%;
+                padding-top: 20px;
 
                 @media @desktop{
-                    margin: 20px 0;
+                    padding-top: 0;
                 }
+            }
+
+            .stars{
+                text-align: right;
             }
 
             @media @desktop{
                 flex-flow: row wrap;
                 justify-content:space-between;
-                padding-bottom: 40px;
+                padding: 20px 0 40px;
 
                 p, .body-img{
                     width: 48%;

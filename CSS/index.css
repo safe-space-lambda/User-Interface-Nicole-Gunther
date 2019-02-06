@@ -407,60 +407,49 @@ footer .footer-content nav h6 {
   flex-direction: column;
   align-items: center;
 }
-#main-content .card,
 #main-content .active-card {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
 }
-#main-content .card .card-content,
 #main-content .active-card .card-content {
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
   padding-bottom: 20px;
 }
-#main-content .card .card-content .body-img,
 #main-content .active-card .card-content .body-img {
   display: flex;
   justify-content: center;
   width: 85%;
-  margin: auto;
   max-width: 470px;
   border-radius: 30px;
 }
-@media (min-width: 701px) {
-  #main-content .card .card-content .body-img,
-  #main-content .active-card .card-content .body-img {
-    margin-top: 10px;
-  }
-}
-#main-content .card .card-content p,
 #main-content .active-card .card-content p {
-  margin: 20px auto;
+  margin: auto;
   max-width: 570px;
   text-align: justify;
   width: 98%;
+  padding-top: 20px;
 }
 @media (min-width: 701px) {
-  #main-content .card .card-content p,
   #main-content .active-card .card-content p {
-    margin: 20px 0;
+    padding-top: 0;
   }
 }
+#main-content .active-card .card-content .stars {
+  text-align: right;
+}
 @media (min-width: 701px) {
-  #main-content .card .card-content,
   #main-content .active-card .card-content {
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding: 20px 0 40px;
   }
-  #main-content .card .card-content p,
   #main-content .active-card .card-content p,
-  #main-content .card .card-content .body-img,
   #main-content .active-card .card-content .body-img {
     width: 48%;
     max-width: 440px;
