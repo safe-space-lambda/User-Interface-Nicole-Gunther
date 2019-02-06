@@ -53,7 +53,7 @@ signUp.addEventListener('mouseup', event => {
 });
 
 var tabletWidth = window.matchMedia("(min-width: 501px)");
-var desktopWidth = window.matchMedia("(min-width: 701px)");
+var desktopWidth = window.matchMedia("(min-width: 801px)");
 
 if (tabletWidth.matches) {
     window.addEventListener('load', () => {
@@ -139,3 +139,23 @@ class TabCard {
 
 let tabs = document.querySelectorAll('.tab');
 tabs.forEach(link => new TabLink(link));
+
+class Review {
+    constructor(domElement) {
+        this.domElement = domElement;
+        this.seeMore = domElement.querySelector('.see-more');
+        this.seeLess = domElement.querySelector('.see-less');
+        this.reviewExtended = domElement.querySelector('.review-extended')
+        this.seeMore.addEventListener('click', () => this.expandReview());
+        this.seeLess.addEventListener('click', () => this.expandReview());
+    }
+
+    expandReview() {
+        this.seeLess.classList.toggle("hidden");
+        this.seeMore.classList.toggle("hidden");
+        this.reviewExtended.classList.toggle('hidden');
+    }
+}
+
+let reviews = document.querySelectorAll('.review');
+reviews.forEach(review => new Review(review));

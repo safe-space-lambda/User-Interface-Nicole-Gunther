@@ -75,10 +75,6 @@
                 }
             }
 
-            .stars{
-                text-align: right;
-            }
-
             @media @desktop{
                 flex-flow: row wrap;
                 justify-content:space-between;
@@ -87,6 +83,55 @@
                 p, .body-img{
                     width: 48%;
                     max-width: 440px;
+                }
+            }
+
+            .review{
+                width: 100%;
+                max-width: 900px;
+                margin-top: 30px;
+                .flex-box(column nowrap, space-evenly, center);
+
+                &:first-child{
+                    margin-top: 0;
+                }
+
+                p{
+                    text-align: center;
+                }
+
+                h6{
+                    color: @charcoal;
+                }
+
+                .review-summary{
+                    width: 90%;
+                    .flex-box(column nowrap, space-evenly, center);
+
+                    .review-img{
+                        width: 50%;
+                        max-width: 200px;
+                        border-radius: 25px;
+                    }
+                }
+                .review-details{
+                    width: 90%;
+                    .flex-box(column nowrap, space-evenly, center);
+
+                    .review-extended{
+                        @media @desktop{
+                            display: flex;
+                        }
+                    }
+
+                    .see-btn{
+                        padding-top: 10px;
+                        cursor: pointer;
+                        
+                        @media @desktop{
+                            display: none;
+                        }
+                    }
                 }
             }
         }

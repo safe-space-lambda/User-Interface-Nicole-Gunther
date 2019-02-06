@@ -194,6 +194,9 @@ a {
 .hidden {
   display: none;
 }
+.shown {
+  display: flex;
+}
 .fade-in-fwd {
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -266,7 +269,7 @@ a {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  max-width: 960px;
+  max-width: 900px;
 }
 #top .market-nav a {
   font-size: 1.5rem;
@@ -301,7 +304,7 @@ a {
   height: 40%;
   border-radius: 50%;
 }
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   #top .header-row1 .header-img {
     display: flex;
   }
@@ -311,7 +314,7 @@ a {
     margin-bottom: 70px;
   }
 }
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   #top .header-row1 {
     display: flex;
     justify-content: space-between;
@@ -351,7 +354,7 @@ a {
     width: 460px;
   }
 }
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   #top .intro {
     height: 250px;
   }
@@ -459,15 +462,12 @@ footer .footer-content nav h6 {
   width: 98%;
   padding-top: 20px;
 }
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   #main-content .active-card .card-content p {
     padding-top: 0;
   }
 }
-#main-content .active-card .card-content .stars {
-  text-align: right;
-}
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   #main-content .active-card .card-content {
     flex-flow: row wrap;
     justify-content: space-between;
@@ -477,6 +477,57 @@ footer .footer-content nav h6 {
   #main-content .active-card .card-content .body-img {
     width: 48%;
     max-width: 440px;
+  }
+}
+#main-content .active-card .card-content .review {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main-content .active-card .card-content .review:first-child {
+  margin-top: 0;
+}
+#main-content .active-card .card-content .review p {
+  text-align: center;
+}
+#main-content .active-card .card-content .review h6 {
+  color: #666;
+}
+#main-content .active-card .card-content .review .review-summary {
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#main-content .active-card .card-content .review .review-summary .review-img {
+  width: 50%;
+  max-width: 200px;
+  border-radius: 25px;
+}
+#main-content .active-card .card-content .review .review-details {
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 801px) {
+  #main-content .active-card .card-content .review .review-details .review-extended {
+    display: flex;
+  }
+}
+#main-content .active-card .card-content .review .review-details .see-btn {
+  padding-top: 10px;
+  cursor: pointer;
+}
+@media (min-width: 801px) {
+  #main-content .active-card .card-content .review .review-details .see-btn {
+    display: none;
   }
 }
 #main-content .sign-up {
