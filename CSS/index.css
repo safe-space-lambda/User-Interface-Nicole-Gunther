@@ -171,6 +171,26 @@ a {
   font-size: 2.4rem;
   color: #ffffff;
 }
+.star1 {
+  font-size: 2rem;
+  color: #6b88e6;
+}
+.star2 {
+  font-size: 2rem;
+  color: #4a87d3;
+}
+.star3 {
+  font-size: 2rem;
+  color: #57aed3;
+}
+.star4 {
+  font-size: 2rem;
+  color: #6bd4c8;
+}
+.star5 {
+  font-size: 2rem;
+  color: #8addaa;
+}
 .hidden {
   display: none;
 }
@@ -470,5 +490,5 @@ footer .footer-content nav h6 {
   margin: 10px auto;
 }
 #main-content .sign-up #signup-btn:hover {
-  background-color: #8addaa;
+  background-color: #c3e895;
 }
