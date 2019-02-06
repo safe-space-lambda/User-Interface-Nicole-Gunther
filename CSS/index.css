@@ -505,6 +505,45 @@ footer .footer-content nav h6 {
 #main-content .sign-up #signup-btn:hover {
   background-color: #c3e895;
 }
+.about-content {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
 .about-content .about-intro h2 {
   color: #666;
+}
+.about-content .about-people {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-content .about-people .role {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-content .about-people .role .person {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-content .about-people .role .person h5 {
+  text-align: center;
+}
+.about-content .about-people .role .person .about-img {
+  border-radius: 50%;
+  width: 90%;
+  max-width: 275px;
+}
+@media (min-width: 501px) {
+  .about-content .about-people .role {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

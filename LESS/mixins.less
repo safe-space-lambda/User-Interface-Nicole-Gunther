@@ -26,3 +26,10 @@
 .gradient(@deg){
     background-image: linear-gradient(@deg, @dark-green, @dark-blue);
 }
+
+.flex-box(@flex-flow, @justify, @align){
+    display: flex;
+    flex-flow: @flex-flow;
+    justify-content: @justify;
+    align-items: @align;
+}

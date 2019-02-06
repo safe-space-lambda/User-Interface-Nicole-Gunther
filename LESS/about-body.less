@@ -1,7 +1,37 @@
 .about-content{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+
     .about-intro{
         h2{
             color: @charcoal;
+        }
+    }
+
+    .about-people{
+        .flex-box(column nowrap, space-evenly, center);
+
+        .role{
+            .flex-box(column nowrap, space-evenly, center);
+
+            .person{
+                .flex-box(column nowrap, space-evenly, center);
+
+                h5{
+                    text-align: center;
+                }
+
+                .about-img{
+                    border-radius: 50%;
+                    width: 90%;
+                    max-width: 275px;
+                }
+            }
+
+            @media @tablet{
+                .flex-box(row wrap, space-between, center);
+            }
         }
     }
 }
