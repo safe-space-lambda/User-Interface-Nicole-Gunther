@@ -1,13 +1,11 @@
 #top{
     .gradient(45deg);
     height: 800px;
-    display: flex;
-    flex-direction: column;
+    .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
     .market-nav{
-        display: flex;
-        justify-content: flex-end;
+        .flex-box(row wrap, flex-end, center);
         width: 100%;
         max-width: 900px;
 
@@ -59,19 +57,14 @@
         }
 
         @media @desktop{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            .flex-box(row wrap, space-between, center);
             max-width: 760px;
         }
     }
 
     .intro{
         height: 280px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        .flex-box(column nowrap, space-between, center);
 
         h3{
             text-align: center;
