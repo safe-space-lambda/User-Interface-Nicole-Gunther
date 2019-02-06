@@ -1,29 +1,116 @@
-#main-content{
-    width: 95%;
-    max-width: 1000px;
-    margin: auto;
+.tabs {
+    padding-top: 30px;
 
-    #woman-with-phone{
-        width: 100%;
-        padding: 15px;
-        border-radius: 20px;
+    .topics{
+        margin: 20px auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid @charcoal;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 90%;
+        max-width: 900px;
+    
+        .tab{
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: 0.5s;
+    
+            &:hover{
+                background-color: @light-grey;
+                cursor: pointer;
+            }
+
+            @media @tablet{
+                padding: 10px 20px;
+            }
+        }
+
+        .active-tab {
+            background-color: @light-grey;
+        }
     }
-    p{
-        margin: 20px 0;
+}
 
-        &:last-child{
+#main-content{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card, .active-card{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+
+        .card-content{
+            margin-top: 20px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 100%;
             padding-bottom: 20px;
+
+            .body-img{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                max-width: 470px;
+                border-radius: 30px;
+
+                @media @desktop{
+                    margin-top: 10px;
+                }
+            }
+
+            p{
+                margin: 20px auto;
+                max-width: 570px;
+                text-align: justify;
+
+                @media @desktop{
+                    margin: 20px 0;
+                }
+            }
+
+            @media @desktop{
+                flex-flow: row wrap;
+                justify-content:space-between;
+                padding-bottom: 40px;
+
+                p, .body-img{
+                    width: 48%;
+                    max-width: 440px;
+                }
+            }
         }
     }
 
-    #login-btn{
-        .custom-btn(120px, 45px);
-        text-decoration: none;
-        background-color: @dark-green;
-        margin-bottom: 40px;
+    .sign-up{
+        border-top: 1px solid @charcoal;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        &:hover{
-            background-color: @light-green;
+        P{
+            padding-top: 10px;
+        }
+
+        #signup-btn{
+            .custom-btn(120px, 45px);
+            text-decoration: none;
+            background-color: @dark-green;
+            margin: 10px auto;
+    
+            &:hover{
+                background-color: @light-green;
+            }
         }
     }
 }

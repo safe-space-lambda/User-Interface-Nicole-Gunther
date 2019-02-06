@@ -11,32 +11,71 @@
 <body>
     <header>
         <nav>
-            <h6>Already know the scoop? <a href="#" class="nav-link">Log In</a></h6>
+            <h6>Already know the scoop? <a href="https://unruffled-panini-b9bd04.netlify.com/login" target="_blank" class="nav-link">Log In</a></h6>
         </nav>
-        <h1 class="hello hidden">Hello,</h1>
-        
-        <h2 class="welcome">and welcome</br> to Safe Space.</h2>
+        <section class="header-row1">
+            <section>
+                <h1 class="hello hidden">Hello,</h1>
+                
+                <h2 class="welcome">and welcome</br> to Safe Space.</h2>
+            </section>
+
+            <img src="assets/mountains-lake.jpg" alt="" id="header-img">
+        </section>
 
         <section class="intro">
-            <h3 class="intro-text hidden">We know it can be hard to stay positive and motivated throughout the day, and we are here to help.</h3>
-            <a href="#main-content" id="btn" class="intro-text hidden">See How</a>
+            <h3 class="intro-text hidden">We know it can be tough to stay positive and motivated throughout the day, so we're here to help.</h3>
+            <a href="#how" id="btn" class="intro-text hidden">See How</a>
         </section>
     </header>
 
-    <div id="main-content">
-        <div>
-            <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone">
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
-                labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
-
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit dicta tempora accusantium placeat dolore ullam aperiam,
-                quo expedita eligendi quis non delectus quos rerum quam explicabo magnam? Totam, assumenda facere!</p>
-            <p>So, what are you waiting for?</p>
-            <a href="#" id="login-btn">Log In</a>
-
+    <div class="tabs" id='how'>
+        <div class="topics">
+            <div data-tab="ourMission" class="tab"><h5>Our Mission</h5></div>
+            <div data-tab="howItWorks" class="tab"><h5>How It Works</h5></div>
+            <div data-tab="testimonials" class="tab"><h5>Testimonials</h5></div>
+            <div data-tab="all" class="tab active-tab"><h5>View All</h5></div>
         </div>
+    </div>
 
+    <div id="main-content">
+        <section class="card active-card" data-tab="ourMission">
+            <h4>Our Mission</h4>
+
+            <section class="card-content">
+                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
+                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+            </section>
+        </section>
+
+        <section class="card active-card" data-tab="howItWorks">
+            <h4>How It Works</h4>
+            
+            <section class="card-content">
+                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
+                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+            </section>
+        </section>
+
+        <section class="card active-card" data-tab="testimonials">
+            <h4>Testimonials</h4>
+            
+            <section class="card-content">
+                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
+                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+            </section>
+        </section>
+        
+        <section class="sign-up">
+            <p>So, what are you waiting for?</p>
+            <a href="https://unruffled-panini-b9bd04.netlify.com/signup" target="_blank" id="signup-btn">Sign Up</a>
+        </section>
     </div>
 
     <footer>
