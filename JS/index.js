@@ -81,7 +81,6 @@ if (tabletWidth.matches) {
 if (desktopWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
-            headerImg.style.display = "flex";
             headerImg.classList.add('fade-in-fwd');
         }, 500);
     });

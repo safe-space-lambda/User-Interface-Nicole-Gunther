@@ -213,7 +213,7 @@ a {
 }
 header {
   background-image: linear-gradient(45deg, #4fa49a, #4361c2);
-  height: 850px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -221,18 +221,29 @@ header {
 header nav {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 960px;
 }
 header nav .nav-link {
   font-size: 1.5rem;
 }
+@media (min-width: 501px) {
+  header nav {
+    margin-bottom: 20px;
+  }
+}
 header .header-row1 {
-  margin-top: 50px;
+  margin: 50px 0;
 }
-header .header-row1 .hello {
-  margin: 0 20px 50px;
+header .header-row1 .hello-welcome .hello {
+  margin: 0 20px 30px;
 }
-header .header-row1 .welcome {
+@media (min-width: 501px) {
+  header .header-row1 .hello-welcome .hello {
+    margin-bottom: 50px;
+  }
+}
+header .header-row1 .hello-welcome .welcome {
   margin-left: 20px;
   display: none;
   justify-content: flex-start;
@@ -242,6 +253,16 @@ header .header-row1 #header-img {
   width: 40%;
   height: 40%;
   border-radius: 50%;
+}
+@media (min-width: 701px) {
+  header .header-row1 #header-img {
+    display: flex;
+  }
+}
+@media (min-width: 501px) {
+  header .header-row1 {
+    margin-bottom: 70px;
+  }
 }
 @media (min-width: 701px) {
   header .header-row1 {
@@ -257,7 +278,6 @@ header .intro {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 70px;
 }
 header .intro h3 {
   text-align: center;
@@ -292,9 +312,7 @@ header .intro .btn {
 @media (min-width: 501px) {
   header {
     align-items: center;
-  }
-  header nav {
-    margin-left: auto;
+    height: 850px;
   }
 }
 footer {
@@ -306,7 +324,7 @@ footer h6 {
   text-align: center;
 }
 .tabs {
-  padding-top: 30px;
+  padding-top: 5px;
 }
 .tabs .topics {
   margin: 20px auto;
@@ -336,6 +354,11 @@ footer h6 {
 .tabs .topics .active-tab {
   background-color: #e6e6e6;
 }
+@media (min-width: 501px) {
+  .tabs {
+    padding-top: 30px;
+  }
+}
 #main-content {
   width: 90%;
   max-width: 900px;
@@ -364,7 +387,7 @@ footer h6 {
 #main-content .active-card .card-content .body-img {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 85%;
   margin: auto;
   max-width: 470px;
   border-radius: 30px;
@@ -380,6 +403,7 @@ footer h6 {
   margin: 20px auto;
   max-width: 570px;
   text-align: justify;
+  width: 98%;
 }
 @media (min-width: 701px) {
   #main-content .card .card-content p,
@@ -410,10 +434,10 @@ footer h6 {
   align-items: center;
 }
 #main-content .sign-up P {
-  padding-top: 10px;
+  padding: 30px 0 10px;
 }
 #main-content .sign-up #signup-btn {
-  width: 120px;
+  width: 130px;
   height: 45px;
   cursor: pointer;
   transition: 0.3s;
