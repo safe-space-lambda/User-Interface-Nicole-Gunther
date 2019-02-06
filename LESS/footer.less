@@ -2,8 +2,32 @@ footer{
     background-image: linear-gradient(135deg, @dark-green, @dark-blue);
     margin-top: 30px;
     padding: 10px 0;
+    width: 100%;
 
-    h6{
-        text-align: center;
+    .footer-content{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+
+        h6{
+            text-align: center;
+            margin-left: 20px;
+        }
+    
+        nav{
+            display: flex;
+            flex-wrap: wrap;
+            width: 250px;
+            justify-content: space-between;
+            align-content: center;
+
+            a, h6{
+                font-size: 1.5rem;
+                margin: 5px 0;
+            }
+        }
     }
 }

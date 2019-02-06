@@ -322,9 +322,31 @@ footer {
   background-image: linear-gradient(135deg, #4fa49a, #4361c2);
   margin-top: 30px;
   padding: 10px 0;
+  width: 100%;
 }
-footer h6 {
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+footer .footer-content h6 {
   text-align: center;
+  margin-left: 20px;
+}
+footer .footer-content nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  justify-content: space-between;
+  align-content: center;
+}
+footer .footer-content nav a,
+footer .footer-content nav h6 {
+  font-size: 1.5rem;
+  margin: 5px 0;
 }
 .tabs {
   padding-top: 5px;
