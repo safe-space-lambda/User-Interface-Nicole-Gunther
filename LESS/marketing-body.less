@@ -20,7 +20,7 @@
                 cursor: pointer;
             }
 
-            @media @tablet{
+            @media @tablet-portrait{
                 padding: 10px 20px;
             }
         }
@@ -61,13 +61,13 @@
                 padding-top: 20px;
                 max-width: 540px;
 
-                @media @desktop{
+                @media @tablet-landscape{
                     padding-top: 0;
                     margin: 0;
                 }
             }
 
-            @media @desktop{
+            @media @tablet-landscape{
                 .flex-box(row wrap, space-around, center);
                 padding: 20px 0 40px;
 
@@ -103,16 +103,12 @@
                     .flex-box(column nowrap, space-evenly, center);
 
                     .review-img{
-                        width: 50%;
+                        width: 100%;
                         max-width: 200px;
                         border-radius: 25px;
-
-                        @media @desktop{
-                            width: 100%;
-                        }
                     }
 
-                    @media @desktop{
+                    @media @tablet-landscape{
                         width: 25%;
                         max-width: 200px;
                     }
@@ -123,13 +119,13 @@
                     .flex-box(column nowrap, space-evenly, center);
 
                     .stars{
-                        @media @desktop{
+                        @media @tablet-landscape{
                             padding-top: 0;
                         }
                     }
 
                     .review-extended{
-                        @media @desktop{
+                        @media @tablet-landscape{
                             display: flex;
                         }
                     }
@@ -138,17 +134,17 @@
                         padding-top: 10px;
                         cursor: pointer;
                         
-                        @media @desktop{
+                        @media @tablet-landscape{
                             display: none;
                         }
                     }
 
-                    @media @desktop{
+                    @media @tablet-landscape{
                         width: 62%;
                     }
                 }
 
-                @media @desktop{
+                @media @tablet-landscape{
                     .flex-box(row wrap, space-around, center);
                     margin: 35px 0;
                 }
@@ -156,7 +152,7 @@
         }
 
         #reverse{
-            @media @desktop{
+            @media @tablet-landscape{
                 .flex-box(row-reverse wrap, space-around, center);
             }
         }
@@ -172,7 +168,7 @@
         }
 
         #signup-btn{
-            .custom-btn(200px, 45px);
+            .custom-btn(15px, 30px);
             text-decoration: none;
             background-color: @dark-green;
             margin: 10px auto;

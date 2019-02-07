@@ -6,6 +6,10 @@
 .custom-icon(@color){
     font-size: 2rem;
     color: @color;
+
+    @media @desktop{
+        font-size: calc(2rem + 0.1vw);
+    }
 }
 
 .flex-align-center(){
@@ -13,9 +17,8 @@
     align-items: center;
 }
 
-.custom-btn(@width, @height){
-    width: @width;
-    height: @height;
+.custom-btn(@pheight, @pwidth){
+    padding: @pheight @pwidth;;
     cursor: pointer;
     transition: 0.3s;
     .flex-align-center;

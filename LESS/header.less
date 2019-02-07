@@ -1,16 +1,22 @@
 #top{
     .gradient(45deg);
-    height: 800px;
+    height: 100vh;
     .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
     .market-top{
         width: 100%;
         max-width: 900px;
-        .flex-box(row wrap, space-between, center);
+        display: none;
+        justify-content: space-between;
+        align-items: center;
 
         .logo{
             max-width: 100px;
+
+            @media @desktop{
+                max-width: calc(100px + 2vw);
+            }
         }
 
         .market-nav{
@@ -20,11 +26,19 @@
     
             a{
                 font-size: 1.5rem;
+
+                @media @desktop{
+                    font-size: calc(1.5rem + 0.1vw);
+                }
             }
     
-            @media @tablet{
+            @media @tablet-portrait{
                 margin-bottom: 20px;
             }
+        }
+
+        @media @desktop{
+            max-width: calc(900px + 10vw);
         }
     }
 
@@ -35,7 +49,7 @@
             .hello{
                 margin-bottom: 30px;
 
-                @media @tablet{
+                @media @tablet-portrait{
                     margin-bottom: 50px;
                 }
             }
@@ -56,18 +70,22 @@
             height: 40%;
             border-radius: 50%;
 
-            @media @desktop{
+            @media @tablet-landscape{
                 display: flex;
             }
         }
 
-        @media @tablet{
+        @media @tablet-portrait{
             margin-bottom: 70px;
         }
 
-        @media @desktop{
+        @media @tablet-landscape{
             .flex-box(row wrap, space-between, center);
             max-width: 760px;
+        }
+
+        @media @desktop{
+            max-width: calc(760px + 5vw);
         }
     }
 
@@ -87,23 +105,26 @@
         }
         .btn{
             text-decoration: none;
-            .custom-btn(150px, 55px);
+            .custom-btn(12px, 25px);
             border: 1.5px solid @white;
             margin-bottom: 40px;
         }
 
-        @media @tablet{
+        @media @tablet-portrait{
             width: 460px;
         }
 
-        @media @desktop{
+        @media @tablet-landscape{
             height: 250px;
+        }
+
+        @media @desktop{
+            width: calc(460px + 10vw);
         }
     
     }
 
-    @media @tablet{
+    @media @tablet-portrait{
         align-items: center;
-        height: 850px;
     }
 }

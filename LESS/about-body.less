@@ -29,9 +29,13 @@
                 }
             }
 
-            @media @tablet{
+            @media @tablet-portrait{
                 .flex-box(row wrap, space-between, center);
             }
         }
+    }
+
+    @media @desktop{
+        max-width: calc(900px + 10vw);
     }
 }
