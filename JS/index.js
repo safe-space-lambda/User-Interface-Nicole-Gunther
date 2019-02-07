@@ -39,20 +39,12 @@ window.addEventListener('load', () => {
     }, 5000);
 });
 
-btn.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.2rem";
-});
-
-btn.addEventListener('mouseup', event => {
-    event.target.style.fontSize = "2.4rem";
-});
-
 signUp.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.2rem";
+    event.target.style.opacity = "0.5";
 });
 
 signUp.addEventListener('mouseup', event => {
-    event.target.style.fontSize = "2.4rem";
+    event.target.style.opacity = "1";
 });
 
 var tabletPortraitWidth = window.matchMedia("(min-width: 501px)");
