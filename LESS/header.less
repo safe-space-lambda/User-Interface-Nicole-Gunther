@@ -1,20 +1,44 @@
 #top{
     .gradient(45deg);
-    height: 800px;
+    height: 100vh;
     .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
-    .market-nav{
-        .flex-box(row wrap, flex-end, center);
+    .market-top{
         width: 100%;
         max-width: 900px;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
 
-        a{
-            font-size: 1.5rem;
+        .logo{
+            max-width: 100px;
+
+            @media @desktop{
+                max-width: calc(100px + 2vw);
+            }
         }
 
-        @media @tablet{
-            margin-bottom: 20px;
+        .market-nav{
+            width: 100%;
+            padding-top: 10px;
+            .flex-box(row wrap, space-evenly, center);
+    
+            a{
+                font-size: 1.5rem;
+
+                @media @desktop{
+                    font-size: calc(1.5rem + 0.1vw);
+                }
+            }
+    
+            @media @tablet-portrait{
+                margin-bottom: 20px;
+            }
+        }
+
+        @media @desktop{
+            max-width: calc(900px + 10vw);
         }
     }
 
@@ -23,15 +47,14 @@
 
         .hello-welcome{
             .hello{
-                margin: 0 20px 30px;
+                margin-bottom: 30px;
 
-                @media @tablet{
+                @media @tablet-portrait{
                     margin-bottom: 50px;
                 }
             }
         
             .welcome{
-                margin-left: 20px;
                 display: none;
                 justify-content: flex-start;
             }
@@ -47,18 +70,22 @@
             height: 40%;
             border-radius: 50%;
 
-            @media @desktop{
+            @media @tablet-landscape{
                 display: flex;
             }
         }
 
-        @media @tablet{
+        @media @tablet-portrait{
             margin-bottom: 70px;
         }
 
-        @media @desktop{
+        @media @tablet-landscape{
             .flex-box(row wrap, space-between, center);
             max-width: 760px;
+        }
+
+        @media @desktop{
+            max-width: calc(760px + 5vw);
         }
     }
 
@@ -76,25 +103,29 @@
                 opacity: 0.8;
             }
         }
+        
         .btn{
             text-decoration: none;
-            .custom-btn(150px, 55px);
+            .custom-btn(12px, 25px);
             border: 1.5px solid @white;
             margin-bottom: 40px;
         }
 
-        @media @tablet{
+        @media @tablet-portrait{
             width: 460px;
         }
 
-        @media @desktop{
+        @media @tablet-landscape{
             height: 250px;
+        }
+
+        @media @desktop{
+            width: calc(460px + 10vw);
         }
     
     }
 
-    @media @tablet{
+    @media @tablet-portrait{
         align-items: center;
-        height: 850px;
     }
 }

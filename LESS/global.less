@@ -16,34 +16,77 @@ html, body {
 
 h1{
     .custom-font(6.5rem, @font-light);
+    
+    @media @desktop{
+        font-size: calc(6.5rem + 0.1vw);
+        
+    }
 }
 
 h2{
     .custom-font(5rem, @font-light);
+
+    @media @desktop{
+        font-size: calc(5rem + 0.1vw);
+    }
 }
 
 h3{
     .custom-font(3rem, @font-light);
+
+    @media @desktop{
+        font-size: calc(3rem + 0.1vw);
+    }
 }
 
 h4{
     .custom-font(4rem, @font-dark);
+
+    @media @desktop{
+        font-size: calc(4rem + 0.1vw);
+    }
 }
 
 h5{
     .custom-font(2.5rem, @font-dark);
+
+    @media @desktop{
+        font-size: calc(2.5rem + 0.1vw);
+    }
 }
 
 h6{
     .custom-font(1.5rem, @font-light);
+
+    @media @desktop{
+        font-size: calc(1.5rem + 0.1vw);
+    }
 }
 
 p{
     .custom-font(1.8rem, @font-dark);
+    line-height: 2.2rem;
+
+    @media @desktop{
+        font-size: calc(2.2rem + 0.1vw);
+        line-height: calc(2.2rem + 0.3vw);
+    }
 }
 
 a{
     .custom-font(2.4rem, @font-light);
+
+    @media @desktop{
+        font-size: calc(2.4rem + 0.1vw);
+    }
+}
+
+em{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold;
 }
 
 .star1{
@@ -72,6 +115,10 @@ a{
 
 .shown{
     display: flex;
+}
+
+.transition{
+    transition: 0.4s;
 }
 
 .fade-in-fwd {

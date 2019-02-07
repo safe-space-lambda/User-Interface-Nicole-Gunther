@@ -4,34 +4,102 @@
     margin: auto;
 
     .about-intro{
-        h2{
-            color: @charcoal;
+        .flex-box(column nowrap, space-evenly, center);
+        border-bottom: 1px solid @charcoal;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        img{
+            width: 60%;
+            max-width: 400px;
+
+            @media @tablet-landscape{
+                width: 30%;
+            }
+        }
+        .about-intro-text{
+            .flex-box(column nowrap, space-evenly, center);
+
+            h2{
+                color: @charcoal;
+                margin-bottom: 30px;
+            }
+
+            h5{
+                text-align: center;
+                line-height: 3rem;
+
+                @media @desktop{
+                    line-height: calc(3rem + 0.3vw);
+                }
+            }
+
+            @media @tablet-landscape{
+                width: 60%;
+            }
+        }
+
+        @media @tablet-landscape{
+            .flex-box(row wrap, space-evenly, center);
         }
     }
 
     .about-people{
         .flex-box(column nowrap, space-evenly, center);
 
-        .role{
+        .about-person{
             .flex-box(column nowrap, space-evenly, center);
+            margin: 40px 0;
 
-            .person{
+            .person-intro{
                 .flex-box(column nowrap, space-evenly, center);
 
-                h5{
-                    text-align: center;
+                img{
+                    border-radius: 50%;
+                    width: 50%;
+
+                    @media @tablet-landscape{
+                        width: 100%;
+                    }
                 }
 
-                .about-img{
-                    border-radius: 50%;
-                    width: 90%;
-                    max-width: 275px;
+                .person-name{
+                    margin-top: 20px;
+                    border-bottom: 1px solid @charcoal;
+
+                    @media @tablet-landscape{
+                        border: none;
+                    }
+                }
+
+                @media @tablet-landscape{
+                    width: 25%;
+                    margin-left: 10%;
                 }
             }
 
-            @media @tablet{
+            .person-details{
+                text-align: center;
+                line-height: 3rem;
+                margin-top: 15px;
+
+                @media @tablet-landscape{
+                    width: 65%;
+                }
+
+                @media @desktop{                    
+                    line-height: calc(3rem + 0.3vw);
+                }
+            }
+
+            @media @tablet-landscape{
                 .flex-box(row wrap, space-between, center);
+                width: 100%;
             }
         }
+    }
+
+    @media @desktop{
+        max-width: calc(900px + 10vw);
     }
 }

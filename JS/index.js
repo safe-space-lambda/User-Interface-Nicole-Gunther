@@ -3,14 +3,16 @@ let hello = document.querySelector('.hello');
 let welcome = document.querySelector('.welcome');
 let headerImg = document.querySelector('.header-img');
 let introText = document.querySelector('.intro-text');
-let mainText = document.querySelectorAll('.main-text');
 let signUp = document.querySelector('#signup-btn');
+let marketTop = document.querySelector('.market-top');
 
 window.addEventListener('load', () => {
     setTimeout( () => {
         hello.classList.remove('hidden');
         hello.classList.add('fade-in-fwd');
         headerImg.removeAttribute("id");
+        marketTop.style.display = "flex";
+        marketTop.classList.add('fade-in-fwd');
     }, 500);
 });
 
@@ -36,26 +38,18 @@ window.addEventListener('load', () => {
     }, 5000);
 });
 
-btn.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.2rem";
-});
-
-btn.addEventListener('mouseup', event => {
-    event.target.style.fontSize = "2.4rem";
-});
-
 signUp.addEventListener('mousedown', event => {
-    event.target.style.fontSize = "2.2rem";
+    event.target.style.opacity = "0.5";
 });
 
 signUp.addEventListener('mouseup', event => {
-    event.target.style.fontSize = "2.4rem";
+    event.target.style.opacity = "1";
 });
 
-var tabletWidth = window.matchMedia("(min-width: 501px)");
-var desktopWidth = window.matchMedia("(min-width: 801px)");
+var tabletPortraitWidth = window.matchMedia("(min-width: 501px)");
+var tabletLandscapeWidth = window.matchMedia("(min-width: 800px)");
 
-if (tabletWidth.matches) {
+if (tabletPortraitWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
             welcome.style.display = "flex";
@@ -79,7 +73,7 @@ if (tabletWidth.matches) {
     });
 }
 
-if (desktopWidth.matches) {
+if (tabletLandscapeWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
             headerImg.classList.add('fade-in-fwd');
