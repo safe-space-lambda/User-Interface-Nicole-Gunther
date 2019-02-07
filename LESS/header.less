@@ -4,17 +4,27 @@
     .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
-    .market-nav{
-        .flex-box(row wrap, flex-end, center);
+    .market-top{
         width: 100%;
         max-width: 900px;
+        .flex-box(row wrap, space-between, center);
 
-        a{
-            font-size: 1.5rem;
+        .logo{
+            max-width: 100px;
         }
 
-        @media @tablet{
-            margin-bottom: 20px;
+        .market-nav{
+            width: 100%;
+            padding-top: 10px;
+            .flex-box(row wrap, space-evenly, center);
+    
+            a{
+                font-size: 1.5rem;
+            }
+    
+            @media @tablet{
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -23,7 +33,7 @@
 
         .hello-welcome{
             .hello{
-                margin: 0 20px 30px;
+                margin-bottom: 30px;
 
                 @media @tablet{
                     margin-bottom: 50px;
@@ -31,7 +41,6 @@
             }
         
             .welcome{
-                margin-left: 20px;
                 display: none;
                 justify-content: flex-start;
             }
