@@ -19,7 +19,7 @@ const caleb = new Helper({
     img: "assets/caleb.jpg",
     name: "Caleb",
     role: "Scrum Master",
-    cohort: "???",
+    cohort: "Web 13",
     favIceCream: "Mint Chocolate Chip",
     specialty: ['Back End', "Front End", "UI"]
 });
