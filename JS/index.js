@@ -1,7 +1,7 @@
 let btn = document.querySelector('.intro a');
 let hello = document.querySelector('.hello');
 let welcome = document.querySelector('.welcome');
-let headerImg = document.querySelector('#header-img');
+let headerImg = document.querySelector('.header-img');
 let introText = document.querySelector('.intro-text');
 let mainText = document.querySelectorAll('.main-text');
 let signUp = document.querySelector('#signup-btn');
@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
     setTimeout( () => {
         hello.classList.remove('hidden');
         hello.classList.add('fade-in-fwd');
+        headerImg.removeAttribute("id");
     }, 500);
 });
 
@@ -52,7 +53,7 @@ signUp.addEventListener('mouseup', event => {
 });
 
 var tabletWidth = window.matchMedia("(min-width: 501px)");
-var desktopWidth = window.matchMedia("(min-width: 701px)");
+var desktopWidth = window.matchMedia("(min-width: 801px)");
 
 if (tabletWidth.matches) {
     window.addEventListener('load', () => {
@@ -81,7 +82,6 @@ if (tabletWidth.matches) {
 if (desktopWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
-            headerImg.style.display = "flex";
             headerImg.classList.add('fade-in-fwd');
         }, 500);
     });
@@ -139,3 +139,23 @@ class TabCard {
 
 let tabs = document.querySelectorAll('.tab');
 tabs.forEach(link => new TabLink(link));
+
+class Review {
+    constructor(domElement) {
+        this.domElement = domElement;
+        this.seeMore = domElement.querySelector('.see-more');
+        this.seeLess = domElement.querySelector('.see-less');
+        this.reviewExtended = domElement.querySelector('.review-extended')
+        this.seeMore.addEventListener('click', () => this.expandReview());
+        this.seeLess.addEventListener('click', () => this.expandReview());
+    }
+
+    expandReview() {
+        this.seeLess.classList.toggle("hidden");
+        this.seeMore.classList.toggle("hidden");
+        this.reviewExtended.classList.toggle('hidden');
+    }
+}
+
+let reviews = document.querySelectorAll('.review');
+reviews.forEach(review => new Review(review));

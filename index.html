@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Safe Space</title>
+    <title>Safe Space - Home</title>
     <link href="css/index.css" rel="stylesheet">
     <script src="./JS/index.js" async></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <nav>
-            <h6>Already know the scoop? <a href="https://unruffled-panini-b9bd04.netlify.com/login" target="_blank" class="nav-link">Log In</a></h6>
+    <header id="top">
+        <nav class="market-nav">
+            <h6>Already know the scoop?</h6>
+            <a href="https://unruffled-panini-b9bd04.netlify.com/" target="_blank" class="nav-link">Log In</a>
+            <h6> | </h6>
+            <a href="about.html">About Us</a>
         </nav>
         <section class="header-row1">
-            <section>
+            <section class="hello-welcome">
                 <h1 class="hello hidden">Hello,</h1>
                 
                 <h2 class="welcome">and welcome</br> to Safe Space.</h2>
             </section>
 
-            <img src="assets/mountains-lake.jpg" alt="" id="header-img">
+            <img src="assets/mountains-lake.jpg" alt="" id="hidden-img" class="header-img">
         </section>
 
         <section class="intro">
@@ -33,31 +37,32 @@
         <div class="topics">
             <div data-tab="ourMission" class="tab"><h5>Our Mission</h5></div>
             <div data-tab="howItWorks" class="tab"><h5>How It Works</h5></div>
-            <div data-tab="testimonials" class="tab"><h5>Testimonials</h5></div>
-            <div data-tab="all" class="tab active-tab"><h5>View All</h5></div>
+            <div data-tab="testimonials" class="tab active-tab"><h5>Testimonials</h5></div>
+            <div data-tab="all" class="tab"><h5>View All</h5></div>
         </div>
     </div>
 
     <div id="main-content">
-        <section class="card active-card" data-tab="ourMission">
+        <section class="card hidden" data-tab="ourMission">
             <h4>Our Mission</h4>
 
             <section class="card-content">
-                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+                <img src="assets/man-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
-                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+                <p class="description">Safe Space is all about creating an environment that encourages self-love and self-motivation.</br>
+                </br>
+                We want you to feel loved and motivated throughout the day.</p>
             </section>
         </section>
 
-        <section class="card active-card" data-tab="howItWorks">
+        <section class="card hidden" data-tab="howItWorks">
             <h4>How It Works</h4>
             
             <section class="card-content">
-                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
                     labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+
+                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
             </section>
         </section>
 
@@ -65,10 +70,86 @@
             <h4>Testimonials</h4>
             
             <section class="card-content">
-                <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+                <div class="review">
+                    <div class="review-summary">
+                        <img src="assets/testimony1.jpg" alt="" class="review-img">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
-                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
+                        <p>Joanne M.</br>Las Vegas, NV</p>
+                    </div>
+
+                    <div class="review-details">                        
+                        <p class=stars>
+                            <i class="fas fa-star star1"></i>
+                            <i class="fas fa-star star2"></i>
+                            <i class="fas fa-star star3"></i>
+                            <i class="fas fa-star star4"></i>
+                            <i class="fas fa-star star5"></i>
+                        </p>
+
+                        <p>"A Wonderful Mood and Motivation Booster"</p>
+
+                        <p class="review-extended hidden">"As a mom, I spend a lot of timing loving and caring for others. Sometimes there isn't
+                            enough time in the day to do anything for myself. Safe Space allows me to give myself a pat on the back for my hard
+                            work, and I don't need to spend much time doing it! Definitely give this a try if you're feeling overwhelmed and
+                            want that motivational push."</p>
+                        <h6 class="see-btn see-more">See More</h6>
+                        <h6 class="see-btn see-less hidden">See Less</h6>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-summary">
+                        <img src="assets/testimony2.jpg" alt="" class="review-img">
+
+                        <p>Kenny P.</br>New York, NY</p>
+                    </div>
+
+                    <div class="review-details">                        
+                        <p class=stars>
+                            <i class="fas fa-star star1"></i>
+                            <i class="fas fa-star star2"></i>
+                            <i class="fas fa-star star3"></i>
+                            <i class="fas fa-star star4"></i>
+                            <i class="fas fa-star star5"></i>
+                        </p>
+
+                        <p>"Changed My Life and Career!"</p>
+
+                        <p class="review-extended hidden">"I'd been pretty down because I wasn't getting the best photos for my job, and was
+                            losing clients. I tend to be pretty hard on myself, but then a friend told me about Safe Space. It's been great
+                            to get that reminder that I'm an awesome person, especially because it's coming from my toughest critic: myself!
+                            Plus, my clients have been really happy with my photos since I stopped beating myself up and remained focused."</p>
+                        <h6 class="see-btn see-more">See More</h6>
+                        <h6 class="see-btn see-less hidden">See Less</h6>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-summary">
+                        <img src="assets/testimony3.jpg" alt="" class="review-img">
+
+                        <p>Marissa F.</br>Portland, OR</p>
+                    </div>
+
+                    <div class="review-details">                        
+                        <p class=stars>
+                            <i class="fas fa-star star1"></i>
+                            <i class="fas fa-star star2"></i>
+                            <i class="fas fa-star star3"></i>
+                            <i class="fas fa-star star4"></i>
+                            <i class="fas fa-star-half-alt star5"></i>
+                        </p>
+
+                        <p>"Spend Time on a Good Day to Save a Low Day"</p>
+
+                        <p class="review-extended hidden">"As a mom, I spend a lot of timing loving and caring for others. Sometimes there isn't
+                            enough time in the day to do anything for myself. Safe Space allows me to give myself a pat on the back for my hard
+                            work, and I don't need to spend much time doing it! Definitely give this a try if you're feeling overwhelmed and
+                            want an extra motivational push."</p>
+                        <h6 class="see-btn see-more">See More</h6>
+                        <h6 class="see-btn see-less hidden">See Less</h6>
+                    </div>
+                </div>
             </section>
         </section>
         
@@ -79,7 +160,17 @@
     </div>
 
     <footer>
-        <h6>© Safe Space 2019</h6>
+        <div class="footer-content">
+            <nav>
+                <a href="https://unruffled-panini-b9bd04.netlify.com/signup">Sign Up</a>
+                <h6> | </h6>
+                <a href="https://unruffled-panini-b9bd04.netlify.com/login">Log In</a>
+                <h6> | </h6>
+                <a href="#top">Back To Top</a>
+            </nav>
+
+            <h6>© Safe Space 2019</h6>
+        </div>
     </footer>
 
 </body>
