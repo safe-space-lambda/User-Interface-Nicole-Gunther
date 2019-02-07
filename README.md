@@ -1,11 +1,15 @@
 # **Safe Space**
 
-Hello, and Welcome to the README! For this website, the following standards were used. Please do not stray from them, as we want to keep the website cohesive:
+### Hello, and welcome to the README! For this website, the following standards were used. Please do not stray from them, as we want to keep the website cohesive.
+
+Default font style and color scheme provided by **Photon** using HTML5 UP: https://html5up.net/photon
 
 ## Font:
 
 - font-family: *"Source Sans Pro", Helvetica, sans-serif*
-- font-weight: *300*
+- font-weight: *300, no extra styles* except:
+    - `em` font-style: *italic*
+    - `strong` font-weight: **bold**
 
 ## Colors:
 
@@ -21,3 +25,22 @@ Hello, and Welcome to the README! For this website, the following standards were
 - ![#4361c2](https://placehold.it/15/4361c2/000000?text=+) `#4361c2`
 - ![#666666](https://placehold.it/15/666666/000000?text=+) `#666666`
 - ![#000000](https://placehold.it/15/000000/000000?text=+) `#000000`
+
+## Animations:
+
+- Fade In Forward using class `.fade-in-fwd`
+- Animation provided by Animista: http://animista.net/
+- Can add Fade Out or Fade Out Back from Animista site if using `transition: 0.6s`
+#
+
+### **LESS** was used to style this site. `index.css` applies globally, but we would not suggest editing the CSS file directly since any changes in LESS will overwrite those edits.
+### The LESS and JS files are assigned to each HTML as follows:
+
+Global | index.html | about.html
+--- | --- | ---
+footer.less | header.less | about-body.less
+global.less | marketing-body.less | navigation.less
+index.less | index.js | about.js
+mixins.less | 
+reset.less | 
+variables.less | 
