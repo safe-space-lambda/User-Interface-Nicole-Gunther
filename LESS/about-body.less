@@ -4,8 +4,43 @@
     margin: auto;
 
     .about-intro{
-        h2{
-            color: @charcoal;
+        .flex-box(column nowrap, space-evenly, center);
+        border-bottom: 1px solid @charcoal;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        img{
+            width: 60%;
+            max-width: 400px;
+
+            @media @tablet-landscape{
+                width: 30%;
+            }
+        }
+        .about-intro-text{
+            .flex-box(column nowrap, space-evenly, center);
+
+            h2{
+                color: @charcoal;
+                margin-bottom: 30px;
+            }
+
+            h5{
+                text-align: center;
+                line-height: 3rem;
+
+                @media @desktop{
+                    line-height: calc(3rem + 0.3vw);
+                }
+            }
+
+            @media @tablet-landscape{
+                width: 60%;
+            }
+        }
+
+        @media @tablet-landscape{
+            .flex-box(row wrap, space-evenly, center);
         }
     }
 
@@ -45,11 +80,15 @@
 
             .person-details{
                 text-align: center;
-                line-height: 30px;
+                line-height: 3rem;
                 margin-top: 15px;
 
                 @media @tablet-landscape{
                     width: 65%;
+                }
+
+                @media @desktop{                    
+                    line-height: calc(3rem + 0.3vw);
                 }
             }
 

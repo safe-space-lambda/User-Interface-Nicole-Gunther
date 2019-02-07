@@ -5,31 +5,29 @@
     width: 100%;
 
     .nav-content{
-        display: flex;
-        justify-content: flex-end;
+        .flex-box(row wrap, center, center);
         width: 90%;
         max-width: 900px;
         margin: auto;
 
         nav{
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: space-between;
-            align-content: center;
+            .flex-box(row wrap, space-between, center);
 
             a{
                 font-size: 1.5rem;
-                margin: 5px 0;
+                margin: 10px;
 
                 @media @desktop{
                     font-size: calc(1.5rem + 0.1vw);
                 }
             }
         }
-
+        @media @tablet-landscape{
+            .flex-box(row wrap, flex-end, center)
+        }
+        
         @media @desktop{
-            max-width: calc(900px + 10vw);
+            max-width: calc(900px + 10vw);;
         }
     }
 }

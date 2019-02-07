@@ -3,7 +3,6 @@ let hello = document.querySelector('.hello');
 let welcome = document.querySelector('.welcome');
 let headerImg = document.querySelector('.header-img');
 let introText = document.querySelector('.intro-text');
-let mainText = document.querySelectorAll('.main-text');
 let signUp = document.querySelector('#signup-btn');
 let marketTop = document.querySelector('.market-top');
 

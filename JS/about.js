@@ -91,6 +91,7 @@ team.forEach(member => {
     aboutPerson.append(personDetails);
     
     let personImg = document.createElement('img');
+    personImg.className = "person-img";
     let personName = document.createElement('p');
     personName.className = "person-name";
     personIntro.append(personImg);
@@ -115,4 +116,18 @@ team.forEach(member => {
         `
     }
 
+});
+
+const personImgs = document.querySelectorAll('.person-img');
+
+personImgs.forEach(element => {
+    return element.addEventListener('mouseover', event => {
+        event.target.style.opacity = "0.8";
+    });
+});
+
+personImgs.forEach(element => {
+    return element.addEventListener('mouseout', event => {
+        event.target.style.opacity = "1";
+    });
 });

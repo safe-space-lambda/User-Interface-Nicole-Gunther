@@ -270,6 +270,9 @@ strong {
 .shown {
   display: flex;
 }
+.transition {
+  transition: 0.4s;
+}
 .fade-in-fwd {
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -315,25 +318,34 @@ strong {
 }
 #about-header .nav-content {
   display: flex;
-  justify-content: flex-end;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   max-width: 900px;
   margin: auto;
 }
 #about-header .nav-content nav {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-flow: row wrap;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 #about-header .nav-content nav a {
   font-size: 1.5rem;
-  margin: 5px 0;
+  margin: 10px;
 }
 @media (min-width: 1000px) {
   #about-header .nav-content nav a {
     font-size: calc(1.5rem + 0.1vw);
+  }
+}
+@media (min-width: 800px) {
+  #about-header .nav-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 @media (min-width: 1000px) {
@@ -493,6 +505,7 @@ footer {
 }
 footer .footer-content {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   width: 90%;
@@ -505,15 +518,15 @@ footer .footer-content h6 {
 }
 footer .footer-content nav {
   display: flex;
-  flex-wrap: wrap;
-  width: 250px;
-  justify-content: space-between;
-  align-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
 }
 footer .footer-content nav a,
 footer .footer-content nav h6 {
   font-size: 1.5rem;
-  margin: 5px 0;
+  margin: 10px;
 }
 @media (min-width: 1000px) {
   footer .footer-content nav a,
@@ -751,8 +764,55 @@ footer .footer-content nav h6 {
   max-width: 900px;
   margin: auto;
 }
-.about-content .about-intro h2 {
+.about-content .about-intro {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #666;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.about-content .about-intro img {
+  width: 60%;
+  max-width: 400px;
+}
+@media (min-width: 800px) {
+  .about-content .about-intro img {
+    width: 30%;
+  }
+}
+.about-content .about-intro .about-intro-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-content .about-intro .about-intro-text h2 {
   color: #666;
+  margin-bottom: 30px;
+}
+.about-content .about-intro .about-intro-text h5 {
+  text-align: center;
+  line-height: 3rem;
+}
+@media (min-width: 1000px) {
+  .about-content .about-intro .about-intro-text h5 {
+    line-height: calc(3rem + 0.3vw);
+  }
+}
+@media (min-width: 800px) {
+  .about-content .about-intro .about-intro-text {
+    width: 60%;
+  }
+}
+@media (min-width: 800px) {
+  .about-content .about-intro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 .about-content .about-people {
   display: flex;
@@ -799,12 +859,17 @@ footer .footer-content nav h6 {
 }
 .about-content .about-people .about-person .person-details {
   text-align: center;
-  line-height: 30px;
+  line-height: 3rem;
   margin-top: 15px;
 }
 @media (min-width: 800px) {
   .about-content .about-people .about-person .person-details {
     width: 65%;
+  }
+}
+@media (min-width: 1000px) {
+  .about-content .about-people .about-person .person-details {
+    line-height: calc(3rem + 0.3vw);
   }
 }
 @media (min-width: 800px) {
