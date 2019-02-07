@@ -468,28 +468,27 @@ footer .footer-content nav h6 {
 }
 #main-content .active-card .card-content .description {
   margin: auto;
-  max-width: 570px;
   text-align: justify;
-  width: 98%;
+  width: 100%;
   padding-top: 20px;
 }
 @media (min-width: 801px) {
   #main-content .active-card .card-content .description {
     padding-top: 0;
+    margin: 0;
   }
 }
 @media (min-width: 801px) {
   #main-content .active-card .card-content {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px 0 40px;
   }
   #main-content .active-card .card-content .description,
   #main-content .active-card .card-content .body-img {
-    width: 48%;
-    max-width: 440px;
+    width: 42.5%;
   }
 }
 #main-content .active-card .card-content .review {
@@ -509,16 +508,12 @@ footer .footer-content nav h6 {
 }
 #main-content .active-card .card-content .review p {
   text-align: center;
-  margin: auto;
-  max-width: 570px;
-  width: 98%;
   padding-top: 20px;
 }
 #main-content .active-card .card-content .review h6 {
   color: #666;
 }
 #main-content .active-card .card-content .review .review-summary {
-  width: 90%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -530,8 +525,14 @@ footer .footer-content nav h6 {
   border-radius: 25px;
 }
 @media (min-width: 801px) {
+  #main-content .active-card .card-content .review .review-summary .review-img {
+    width: 100%;
+  }
+}
+@media (min-width: 801px) {
   #main-content .active-card .card-content .review .review-summary {
-    width: 30%;
+    width: 25%;
+    max-width: 200px;
   }
 }
 #main-content .active-card .card-content .review .review-details {
@@ -562,16 +563,24 @@ footer .footer-content nav h6 {
 }
 @media (min-width: 801px) {
   #main-content .active-card .card-content .review .review-details {
-    width: 70%;
+    width: 62%;
   }
 }
 @media (min-width: 801px) {
   #main-content .active-card .card-content .review {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 35px 0;
+  }
+}
+@media (min-width: 801px) {
+  #main-content .active-card #reverse {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 #main-content .sign-up {
@@ -582,11 +591,11 @@ footer .footer-content nav h6 {
   justify-content: space-between;
   align-items: center;
 }
-#main-content .sign-up P {
+#main-content .sign-up p {
   padding: 30px 0 10px;
 }
 #main-content .sign-up #signup-btn {
-  width: 130px;
+  width: 200px;
   height: 45px;
   cursor: pointer;
   transition: 0.3s;

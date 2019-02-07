@@ -7,6 +7,7 @@
     <title>Safe Space - Home</title>
     <link href="css/index.css" rel="stylesheet">
     <script src="./JS/index.js" async></script>
+    <link rel="icon" href="favicon.ico" type="image/ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
@@ -35,21 +36,23 @@
 
     <div class="tabs" id='how'>
         <div class="topics">
-            <div data-tab="ourMission" class="tab"><h5>Our Mission</h5></div>
+            <div data-tab="ourMission" class="tab active-tab"><h5>Our Mission</h5></div>
             <div data-tab="howItWorks" class="tab"><h5>How It Works</h5></div>
-            <div data-tab="testimonials" class="tab active-tab"><h5>Testimonials</h5></div>
+            <div data-tab="testimonials" class="tab"><h5>Testimonials</h5></div>
             <div data-tab="all" class="tab"><h5>View All</h5></div>
         </div>
     </div>
 
     <div id="main-content">
-        <section class="card hidden" data-tab="ourMission">
+        <section class="card active-card" data-tab="ourMission">
             <h4>Our Mission</h4>
 
             <section class="card-content">
                 <img src="assets/man-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
 
-                <p class="description">Safe Space is all about creating an environment that encourages self-love and self-motivation.</br>
+                <p class="description">"Feel the love" with Safe Space!</br>
+                </br>
+                Safe Space is all about creating an environment that encourages self-love and self-motivation.</br>
                 </br>
                 We want you to feel loved and motivated throughout the day.</p>
             </section>
@@ -58,15 +61,19 @@
         <section class="card hidden" data-tab="howItWorks">
             <h4>How It Works</h4>
             
-            <section class="card-content">
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum hic sequi quas qui, totam iure numquam voluptates fugiat quo
-                    labore laudantium corrupti, veritatis accusantium rem, consequatur optio quisquam corporis accusamus.</p>
-
+            <section class="card-content" id="reverse">
                 <img src="assets/woman-with-phone.jpg" alt="" id="woman-with-phone" class="body-img">
+
+                <p class="description">All you need to sign up is your name, e-mail and password.</br>
+                    </br>
+                    From there, you will enter your phone number and custom messages to motivate yourself. And that's it!
+                    
+                    There is no price on mental health, so Safe Space will always be free to you.
+                </p>
             </section>
         </section>
 
-        <section class="card active-card" data-tab="testimonials">
+        <section class="card hidden" data-tab="testimonials">
             <h4>Testimonials</h4>
             
             <section class="card-content">
@@ -154,17 +161,17 @@
         </section>
         
         <section class="sign-up">
-            <p>So, what are you waiting for?</p>
-            <a href="https://unruffled-panini-b9bd04.netlify.com/signup" target="_blank" id="signup-btn">Sign Up</a>
+            <p>So, are you ready to get started with Safe Space?</p>
+            <a href="https://unruffled-panini-b9bd04.netlify.com/" target="_blank" id="signup-btn">Yes, Let's Go!</a>
         </section>
     </div>
 
     <footer>
         <div class="footer-content">
             <nav>
-                <a href="https://unruffled-panini-b9bd04.netlify.com/signup">Sign Up</a>
+                <a href="https://unruffled-panini-b9bd04.netlify.com/" target="_blank">Log In</a>
                 <h6> | </h6>
-                <a href="https://unruffled-panini-b9bd04.netlify.com/login">Log In</a>
+                <a href="about.html">About Us</a>
                 <h6> | </h6>
                 <a href="#top">Back To Top</a>
             </nav>
