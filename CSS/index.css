@@ -201,6 +201,7 @@ p {
 @media (min-width: 1000px) {
   p {
     font-size: calc(2.2rem + 0.1vw);
+    line-height: calc(2.2rem + 0.1vw);
   }
 }
 a {
@@ -557,6 +558,11 @@ footer .footer-content nav h6 {
 .tabs .topics .active-tab {
   background-color: #e6e6e6;
 }
+@media (min-width: 1000px) {
+  .tabs .topics {
+    max-width: calc(900px + 10vw);
+  }
+}
 #main-content {
   width: 90%;
   max-width: 900px;
@@ -696,6 +702,11 @@ footer .footer-content nav h6 {
     margin: 35px 0;
   }
 }
+@media (min-width: 1000px) {
+  #main-content .active-card .card-content .review {
+    max-width: calc(900px + 10vw);
+  }
+}
 @media (min-width: 800px) {
   #main-content .active-card #reverse {
     display: flex;
@@ -729,6 +740,11 @@ footer .footer-content nav h6 {
 }
 #main-content .sign-up #signup-btn:hover {
   background-color: #c3e895;
+}
+@media (min-width: 1000px) {
+  #main-content {
+    max-width: calc(900px + 10vw);
+  }
 }
 .about-content {
   width: 90%;

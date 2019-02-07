@@ -28,6 +28,10 @@
         .active-tab {
             background-color: @light-grey;
         }
+        
+        @media @desktop{
+            max-width: calc(900px + 10vw);
+        }
     }
 }
 
@@ -148,6 +152,10 @@
                     .flex-box(row wrap, space-around, center);
                     margin: 35px 0;
                 }
+
+                @media @desktop{
+                    max-width: calc(900px + 10vw);
+                }
             }
         }
 
@@ -177,5 +185,9 @@
                 background-color: @yellow-green;
             }
         }
+    }
+
+    @media @desktop{
+        max-width: calc(900px + 10vw);
     }
 }
