@@ -496,7 +496,7 @@ strong {
     align-items: center;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   #top {
     max-height: 100vw;
   }
