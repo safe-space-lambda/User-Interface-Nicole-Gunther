@@ -424,7 +424,6 @@ strong {
 #top .header-row1 .header-img {
   display: none;
   width: 40%;
-  height: 40%;
   border-radius: 50%;
 }
 @media (min-width: 800px) {
@@ -495,6 +494,11 @@ strong {
 @media (min-width: 501px) {
   #top {
     align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  #top {
+    max-height: 100vw;
   }
 }
 footer {
