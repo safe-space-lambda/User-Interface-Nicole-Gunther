@@ -120,6 +120,12 @@
             margin: 20px 0;
             .custom-btn(12px, 25px);
             border: 1.5px solid @white;
+
+            @media @tablet-landscape{
+                @media (min-height: 100vw){
+                    display: none;
+                }
+            }
         }
 
         @media @tablet-portrait{
@@ -137,6 +143,9 @@
     }
 
     @media @tablet-landscape{
-        max-height: 100vw;
+        @media (min-height: 100vw){
+            min-height: 40vh;
+            max-height: 100vw;
+        }
     }
 }
