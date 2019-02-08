@@ -274,12 +274,6 @@ strong {
 .hidden {
   display: none;
 }
-.shown {
-  display: flex;
-}
-.transition {
-  transition: 0.4s;
-}
 .fade-in-fwd {
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
