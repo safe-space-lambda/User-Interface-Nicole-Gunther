@@ -1,6 +1,7 @@
 #top{
     .gradient(45deg);
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
@@ -134,13 +135,4 @@
     @media @tablet-portrait{
         align-items: center;
     }
-
-    @media @desktop{
-        height: auto;
-        min-height: 100vh;
-    }
-}
-
-.init-height{
-    height: 100vh;
 }

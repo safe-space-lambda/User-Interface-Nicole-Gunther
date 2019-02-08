@@ -5,7 +5,6 @@ let headerImg = document.querySelector('.header-img');
 let introText = document.querySelector('.intro-text');
 let signUp = document.querySelector('#signup-btn');
 let marketTop = document.querySelector('.market-top');
-let topHeader = document.querySelector('#top');
 
 window.addEventListener('load', () => {
     setTimeout( () => {
@@ -35,12 +34,8 @@ window.addEventListener('load', () => {
     setTimeout( () => {
         btn.classList.remove('hidden');
         btn.classList.add('fade-in-fwd');
-        btn.classList.add('btn');        
+        btn.classList.add('btn');
     }, 5000);
-});
-
-signUp.addEventListener('mousedown', event => {
-    event.target.style.opacity = "0.5";
 });
 
 signUp.addEventListener('mousedown', event => {
@@ -83,15 +78,6 @@ if (tabletLandscapeWidth.matches) {
         setTimeout( () => {
             headerImg.classList.add('fade-in-fwd');
         }, 500);
-    });
-
-    window.addEventListener('load', () => {
-        setTimeout( () => {
-            let number = window.innerHeight - 53;
-            if(topHeader.style.height < number){
-                topHeader.classList.remove('init-height');
-            }
-        }, 3500);
     });
 }
 
