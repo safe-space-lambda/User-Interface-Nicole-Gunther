@@ -512,6 +512,11 @@ strong {
     align-items: center;
   }
 }
+@media (min-width: 800px) {
+  #top {
+    max-height: 100vw;
+  }
+}
 footer {
   background-image: linear-gradient(135deg, #4fa49a, #4361c2);
   margin-top: 30px;
