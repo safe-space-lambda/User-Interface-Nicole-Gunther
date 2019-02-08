@@ -1,6 +1,7 @@
 #top{
     .gradient(45deg);
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     .flex-box(column nowrap, flex-start, flex-start);
     padding: 20px;
 
@@ -43,9 +44,10 @@
     }
 
     .header-row1{
-        margin: 50px 0;
+        margin: 50px auto;
 
         .hello-welcome{
+            .flex-box(column wrap, space-evenly, center);
             .hello{
                 margin-bottom: 30px;
 
@@ -57,6 +59,15 @@
             .welcome{
                 display: none;
                 justify-content: flex-start;
+                text-align: center;
+
+                @media @tablet-landscape{
+                    text-align: left;
+                }
+            }
+
+            @media @tablet-landscape{
+                .flex-box(column wrap, space-evenly, flex-start);
             }
         }
 
@@ -67,7 +78,6 @@
         .header-img{
             display: none;
             width: 40%;
-            height: 40%;
             border-radius: 50%;
 
             @media @tablet-landscape{
@@ -90,11 +100,12 @@
     }
 
     .intro{
-        height: 280px;
-        .flex-box(column nowrap, space-between, center);
+        // height: 280px;
+        .flex-box(column nowrap, flex-start, center);
 
         h3{
             text-align: center;
+            margin-bottom: 20px;
         }
 
         a{
@@ -106,17 +117,13 @@
         
         .btn{
             text-decoration: none;
+            margin: 20px 0;
             .custom-btn(12px, 25px);
             border: 1.5px solid @white;
-            margin-bottom: 40px;
         }
 
         @media @tablet-portrait{
             width: 460px;
-        }
-
-        @media @tablet-landscape{
-            height: 250px;
         }
 
         @media @desktop{
@@ -127,5 +134,9 @@
 
     @media @tablet-portrait{
         align-items: center;
+    }
+
+    @media @tablet-landscape{
+        max-height: 100vw;
     }
 }

@@ -311,7 +311,7 @@ strong {
   }
 }
 #about-header {
-  background-image: linear-gradient(135deg, #4fa49a, #4361c2);
+  background-image: linear-gradient(45deg, #4fa49a, #4361c2);
   margin-bottom: 30px;
   padding: 10px 0;
   width: 100%;
@@ -355,7 +355,8 @@ strong {
 }
 #top {
   background-image: linear-gradient(45deg, #4fa49a, #4361c2);
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -404,7 +405,13 @@ strong {
   }
 }
 #top .header-row1 {
-  margin: 50px 0;
+  margin: 50px auto;
+}
+#top .header-row1 .hello-welcome {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 #top .header-row1 .hello-welcome .hello {
   margin-bottom: 30px;
@@ -417,6 +424,20 @@ strong {
 #top .header-row1 .hello-welcome .welcome {
   display: none;
   justify-content: flex-start;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  #top .header-row1 .hello-welcome .welcome {
+    text-align: left;
+  }
+}
+@media (min-width: 800px) {
+  #top .header-row1 .hello-welcome {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
 }
 #top .header-row1 #hidden-img {
   display: none;
@@ -424,7 +445,6 @@ strong {
 #top .header-row1 .header-img {
   display: none;
   width: 40%;
-  height: 40%;
   border-radius: 50%;
 }
 @media (min-width: 800px) {
@@ -452,14 +472,14 @@ strong {
   }
 }
 #top .intro {
-  height: 280px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 #top .intro h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
 #top .intro a:hover {
   background: #666;
@@ -467,6 +487,7 @@ strong {
 }
 #top .intro .btn {
   text-decoration: none;
+  margin: 20px 0;
   padding: 12px 25px;
   cursor: pointer;
   transition: 0.3s;
@@ -475,16 +496,10 @@ strong {
   justify-content: center;
   border-radius: 10px;
   border: 1.5px solid #ffffff;
-  margin-bottom: 40px;
 }
 @media (min-width: 501px) {
   #top .intro {
     width: 460px;
-  }
-}
-@media (min-width: 800px) {
-  #top .intro {
-    height: 250px;
   }
 }
 @media (min-width: 1000px) {
@@ -495,6 +510,11 @@ strong {
 @media (min-width: 501px) {
   #top {
     align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  #top {
+    max-height: 100vw;
   }
 }
 footer {
@@ -774,8 +794,14 @@ footer .footer-content nav h6 {
   margin-bottom: 20px;
 }
 .about-content .about-intro img {
-  width: 60%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 300px;
+}
+@media (min-width: 501px) {
+  .about-content .about-intro img {
+    width: 60%;
+    max-width: 400px;
+  }
 }
 @media (min-width: 800px) {
   .about-content .about-intro img {
@@ -787,6 +813,7 @@ footer .footer-content nav h6 {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 10px 0;
 }
 .about-content .about-intro .about-intro-text h2 {
   color: #666;
