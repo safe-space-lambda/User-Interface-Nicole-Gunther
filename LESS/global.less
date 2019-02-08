@@ -14,6 +14,11 @@ html, body {
     margin: auto;
 }
 
+.container{
+    min-height: 100vh;
+    .flex-box(column nowrap, flex-start, stretch);
+}
+
 h1{
     .custom-font(6.5rem, @font-light);
     
@@ -111,14 +116,6 @@ strong{
 
 .hidden{
     display: none;
-}
-
-.shown{
-    display: flex;
-}
-
-.transition{
-    transition: 0.4s;
 }
 
 .fade-in-fwd {

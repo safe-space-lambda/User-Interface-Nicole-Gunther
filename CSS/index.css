@@ -139,6 +139,13 @@ body {
   font-weight: 300;
   margin: auto;
 }
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
 h1 {
   font-size: 6.5rem;
   color: #ffffff;
@@ -266,12 +273,6 @@ strong {
 }
 .hidden {
   display: none;
-}
-.shown {
-  display: flex;
-}
-.transition {
-  transition: 0.4s;
 }
 .fade-in-fwd {
   -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -497,6 +498,11 @@ strong {
   border-radius: 10px;
   border: 1.5px solid #ffffff;
 }
+@media (min-width: 800px) and (min-height: 100vw) {
+  #top .intro .btn {
+    display: none;
+  }
+}
 @media (min-width: 501px) {
   #top .intro {
     width: 460px;
@@ -512,8 +518,9 @@ strong {
     align-items: center;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 800px) and (min-height: 100vw) {
   #top {
+    min-height: 45vh;
     max-height: 100vw;
   }
 }
