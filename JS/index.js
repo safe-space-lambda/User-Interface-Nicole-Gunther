@@ -48,6 +48,7 @@ signUp.addEventListener('mouseup', event => {
 
 var tabletPortraitWidth = window.matchMedia("(min-width: 501px)");
 var tabletLandscapeWidth = window.matchMedia("(min-width: 800px)");
+var desktopWidth = window.matchMedia("(min-width: 1000px)");
 
 if (tabletPortraitWidth.matches) {
     window.addEventListener('load', () => {
@@ -77,6 +78,23 @@ if (tabletLandscapeWidth.matches) {
     window.addEventListener('load', () => {
         setTimeout( () => {
             headerImg.classList.add('fade-in-fwd');
+        }, 500);
+    });
+}
+
+if (desktopWidth.matches) {
+    window.addEventListener('load', () => {
+        setTimeout( () => {
+            introText.classList.remove('hidden');
+            introText.classList.add('fade-in-fwd');
+        }, 500);
+    });
+    
+    window.addEventListener('load', () => {
+        setTimeout( () => {
+            btn.classList.remove('hidden');
+            btn.classList.add('fade-in-fwd');
+            btn.classList.add('btn');
         }, 500);
     });
 }

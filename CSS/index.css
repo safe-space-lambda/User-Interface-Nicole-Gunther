@@ -470,6 +470,7 @@ strong {
 @media (min-width: 1000px) {
   #top .header-row1 {
     max-width: calc(760px + 5vw);
+    margin-top: 10px;
   }
 }
 #top .intro {
@@ -522,6 +523,11 @@ strong {
   #top {
     min-height: 45vh;
     max-height: 100vw;
+  }
+}
+@media (min-width: 1000px) {
+  #top {
+    justify-content: center;
   }
 }
 footer {
