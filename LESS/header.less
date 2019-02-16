@@ -83,6 +83,14 @@
             @media @tablet-landscape{
                 display: flex;
             }
+
+            @media @desktop{
+                width: 35%;
+            }
+
+            @media @desktop-large{
+                width: 40%;
+            }
         }
 
         @media @tablet-portrait{
@@ -92,11 +100,16 @@
         @media @tablet-landscape{
             .flex-box(row wrap, space-between, center);
             max-width: 760px;
+            margin: 30px auto;
         }
 
         @media @desktop{
             max-width: calc(760px + 5vw);
             margin-top: 10px;
+        }
+
+        @media @desktop-large{
+            margin: 50px auto;
         }
     }
 
@@ -106,6 +119,14 @@
         h3{
             text-align: center;
             margin-bottom: 20px;
+
+            @media @desktop{
+                margin-bottom: 10px;
+            }
+
+            @media @desktop-large{
+                margin-bottom: 20px;
+            }
         }
 
         a{
